@@ -1,0 +1,204 @@
+:root { 
+  --pink: #e7a6b5; 
+  --dark: #333; 
+  --cream: #fff8f5; 
+} 
+
+html { 
+  scroll-behavior: smooth; 
+} 
+
+body { 
+  margin: 0; 
+  font-family: 'Montserrat', sans-serif; 
+  color: var(--dark); 
+} 
+
+/* ========================= HERO ========================= */ 
+.hero { 
+  min-height: 100vh; 
+  /* PERBAIKAN: Menambahkan fallback warna background dan tanda kutip pada url */
+  background: linear-gradient( rgba(209, 6, 6, 0.45), rgba(0, 0, 0, 0.45) ), url('img/prewed.jpeg') center/cover no-repeat #333; 
+  /* PERBAIKAN: Menambahkan flexbox agar teks di hero bisa ke tengah secara vertikal & horizontal */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+} 
+
+.hero h4 { 
+  font-size: 1rem; 
+  letter-spacing: 2px; 
+  margin: 0; /* Tambahan: Reset margin bawaan tag h4 */
+} 
+
+.hero h1 { 
+  font-family: 'Sacramento', cursive; 
+  font-size: 6rem; 
+  margin: 20px 0; 
+} 
+
+.hero p { 
+  font-size: 1rem; 
+  margin-bottom: 20px; /* Tambahan: Memberi jarak ke tombol di bawahnya */
+} 
+
+.hero .btn { 
+  background-color: white; 
+  color: var(--dark); 
+  border-radius: 30px; 
+  padding: 12px 25px; 
+  text-decoration: none; /* PERBAIKAN: Menghilangkan garis bawah jika tombol pakai tag <a> */
+  display: inline-block;  /* PERBAIKAN: Agar padding tombol berfungsi dengan benar */
+} 
+
+/* ========================= NAVBAR ========================= */ 
+.mynavbar { 
+  background-color: rgba(255, 255, 255, 0.95) !important; 
+} 
+
+.navbar-brand { 
+  font-family: 'Sacramento', cursive; 
+  font-size: 2rem; 
+} 
+
+.nav-link { 
+  font-weight: 500; 
+  margin-left: 15px; 
+} 
+
+/* ========================= SECTION ========================= */ 
+section { 
+  padding: 100px 0; 
+} 
+
+/* ========================= HOME ========================= */ 
+.home { 
+  background-color: var(--cream); 
+} 
+
+/* PERBAIKAN: Mempersingkat selektor yang berulang */
+.home h2, .info h2, .story h2, .gallery h2, .rsvp h2, .gifts h2 { 
+  font-family: 'Sacramento', cursive; 
+  font-size: 3.5rem; 
+} 
+
+.home img { 
+  width: 220px; 
+  height: 220px; 
+  object-fit: cover; 
+  border: 8px solid white; 
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15); 
+  border-radius: 50%; /* REKOMENDASI: Biasanya foto pengantin berbentuk bulat */
+} 
+
+.home h3 { 
+  font-family: 'Sacramento', cursive; 
+  font-size: 2.5rem; 
+} 
+
+/* ========================= INFO ========================= */ 
+.info { 
+  background-color: #f5eeee; 
+} 
+
+.card { 
+  border: none; 
+  border-radius: 20px; 
+  padding: 20px; 
+  margin-bottom: 20px; 
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); 
+} 
+
+.icon { 
+  font-size: 3rem; 
+  color: var(--pink); 
+} 
+
+.card h3 { 
+  margin-top: 15px; 
+} 
+
+/* ========================= STORY ========================= */ 
+.story { 
+  background-color: var(--cream); 
+} 
+
+.story-box { 
+  background: white; 
+  padding: 30px; 
+  margin-bottom: 25px; 
+  border-left: 5px solid var(--pink); 
+  border-radius: 10px; 
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06); 
+} 
+
+.story-box h3 { 
+  font-family: 'Sacramento', cursive; 
+  font-size: 2.5rem; 
+} 
+
+/* ========================= GALLERY ========================= */ 
+.gallery { 
+  background-color: #f5eeee; 
+} 
+
+.gallery img { 
+  width: 100%; 
+  height: 300px; 
+  object-fit: cover; 
+  transition: 0.3s; 
+  border-radius: 8px; /* Tambahan: Agar sudut gambar gallery tidak terlalu tajam */
+} 
+
+.gallery img:hover { 
+  transform: scale(1.03); 
+} 
+
+/* ========================= RSVP ========================= */ 
+.rsvp { 
+  background-color: var(--cream); 
+} 
+
+.rsvp .btn { 
+  border-radius: 30px; 
+  padding: 12px 25px; 
+} 
+
+/* ========================= GIFTS ========================= */ 
+.gifts { 
+  background-color: #f5eeee; 
+} 
+
+/* ========================= FOOTER ========================= */ 
+footer { 
+  background-color: #222; 
+  color: white; 
+  text-align: center; 
+  padding: 30px; 
+} 
+
+/* ========================= MOBILE ========================= */ 
+@media (max-width: 768px) { 
+  .hero h1 { 
+    font-size: 4rem; 
+  } 
+  
+  .hero h4 { 
+    font-size: 0.9rem; 
+  } 
+  
+  section { 
+    padding: 70px 20px; 
+  } 
+  
+  .home h2, .info h2, .story h2, .gallery h2, .rsvp h2, .gifts h2 { 
+    font-size: 2.8rem; 
+  } 
+  
+  .home img { 
+    width: 180px; 
+    height: 180px; 
+  } 
+}
