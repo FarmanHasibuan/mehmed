@@ -18,7 +18,7 @@ body {
 .hero { 
   min-height: 100vh; 
   /* PERBAIKAN: Menambahkan fallback warna background dan tanda kutip pada url */
-  background: linear-gradient( rgba(209, 6, 6, 0.45), rgba(0, 0, 0, 0.45) ), url('img/prewed.jpeg') center/cover no-repeat #333; 
+  background: linear-gradient( rgba(209, 6, 6, 0.45), rgba(0, 0, 0, 0.45) ), url('prewed.jpeg') center/cover no-repeat #333; 
   /* PERBAIKAN: Menambahkan flexbox agar teks di hero bisa ke tengah secara vertikal & horizontal */
   display: flex;
   flex-direction: column;
